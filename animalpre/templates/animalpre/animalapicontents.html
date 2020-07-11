@@ -1,0 +1,157 @@
+{% block body%}
+{% load static from staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AnimalPre</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'animalpre/img/favicon.png'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/img/apple-touch-icon.png'%}" rel="stylesheet">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  <link href="{% static 'animalpre/lib/animate/animate.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+
+  
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+      #loader { 
+        border: 12px solid #f3f3f3; 
+        border-radius: 50%; 
+        border-top: 12px solid #444444; 
+        width: 70px; 
+        height: 70px; 
+        animation: spin 1s linear infinite; 
+      } 
+  
+      @keyframes spin { 
+        100% { 
+            transform: rotate(360deg); 
+        } 
+      } 
+  
+      .center { 
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+        right: 0; 
+        margin: auto; 
+      } 
+        
+    </style>
+
+
+
+    <div class="container fluid">
+        <br>
+        
+         <div class="row ">
+    
+      
+            <p class= "col-xs-12   col-lg-6 "><a href='http://127.0.0.1:8000/animalpre/api/animalpre/?format=json'>View api in json format</a></p>
+      
+          </div>
+    </div>
+    
+    <body>
+    <div class="container text-center">
+      <div class= "col"></div>
+    
+      <div class="card mb-4 shadow-sm">
+
+
+         
+         <p class='blue-text' > 	does_it_have_hair: {{animalpostsdetail.does_it_have_hair}}</p>
+
+         <p class='blue-text' > does_it_have_feathers:  {{animalpostsdetail.does_it_have_feathers}}</p>
+
+
+         <p class='blue-text' > does_it_lay_eggs: {{animalpostsdetail.does_it_lay_eggs}}</p>
+
+         <p class='blue-text' > does_it_produce_milk:  {{animalpostsdetail.does_it_produce_milk}}</p>
+
+         <p class='blue-text' > is_it_airborne: {{animalpostsdetail.is_it_airborne}}</p>
+
+         <p class='blue-text' > Is_it_Aquatic: {{animalpostsdetail.Is_it_Aquatic}}</p>
+
+         <p class='blue-text' >  is_it_a_predator: {{animalpostsdetail.is_it_a_predator}}</p>
+
+         <p class='blue-text' > does_it_have_teeth: {{animalpostsdetail.does_it_have_teeth}}</p>
+
+         <p class='blue-text' >  does_it_have_backbone: {{animalpostsdetail.does_it_have_backbone}}</p>
+
+         <p class='blue-text' > does_it_breath: {{animalpostsdetail.does_it_breath}}</p>
+
+         <p class='blue-text' >  is_it_venomous: {{animalpostsdetail.is_it_venomous}}</p>
+
+         <p class='blue-text' >  does_it_have_fins :{{animalpostsdetail.does_it_have_fins}}</p>
+
+         <p class='blue-text' >  how_many_legs : {{animalpostsdetail.how_many_legs}}</p>
+
+         <p class='blue-text' >  how_many_tails: {{animalpostsdetail.how_many_tails}}</p>
+
+         <p class='blue-text' >  is_it_domestic: {{animalpostsdetail.is_it_domestic}}</p>
+
+<strong>         <p class='blue-text' > PREDICTED:  {{animalpostsdetail.predicted}}</p></strong>
+
+         
+         <p class='blue-text' >  is_prediction_correct: {{animalpostsdetail.is_prediction_correct}}</p>
+
+         
+         <p class='blue-text' >  what_animal_were_you_thinking_of: {{animalpostsdetail.what_animal_were_you_thinking_of}}</p>
+
+         
+        
+   
+   
+         </div>
+
+         </div>
+         </body>
+
+
+
+{% endblock %}

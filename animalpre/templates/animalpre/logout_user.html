@@ -1,0 +1,222 @@
+{% block body%}
+
+{% load static from staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AnimalPre</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'animalpre/img/favicon.png'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/img/apple-touch-icon.png'%}" rel="stylesheet">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  <link href="{% static 'animalpre/lib/animate/animate.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+
+  
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <style>
+      #loader { 
+        border: 12px solid #f3f3f3; 
+        border-radius: 50%; 
+        border-top: 12px solid #444444; 
+        width: 70px; 
+        height: 70px; 
+        animation: spin 1s linear infinite; 
+      } 
+  
+      @keyframes spin { 
+        100% { 
+            transform: rotate(360deg); 
+        } 
+      } 
+  
+      .center { 
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+        right: 0; 
+        margin: auto; 
+      } 
+        
+    </style>
+    
+  
+
+
+  
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+ <!-- The Modal -->
+ <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          
+            
+       
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+                <div class="col-sm-9 col-md-7 col-lg-12 mx-auto">
+
+                    <h1 class="scrollto" style="font-family: cursive; color: darkblue">Animal<span style="color: lightgreen">pre</span></h1>
+
+                    <div class="card card-signin my-5 ">
+                        
+                        <div class="card-body">
+                        
+                           
+                                <strong><p style="font-family: courier; color: darkblue">Signup or login to access the animal news app thats let you search for your favorite animals and read animal news</p></strong>
+
+                                <a href="{% url 'animalpre:signup' %}"><hr class="my-4"> <button class=" btn  btn-primary btn-block text-uppercase" type="submit"> Signup</button> </a>
+                                <br>                 
+                            <p class="text-center">OR</p>
+                           
+                              <a href="{% url 'animalpre:login' %}"> <hr class="my-4"> <button class=" btn-google  btn-success btn-block text-uppercase" type="submit"><i class=""></i> Login</button></a> 
+                                
+                                
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <!-- Modal footer -->
+        
+      </div>
+    </div>
+  </div>
+  
+
+<body id="body">
+        <div id="loader" class="center"></div>
+      
+        <!--==========================
+          Top Bar
+        ============================-->
+        <section id="topbar" class="d-none d-lg-block">
+          <div class="container clearfix">
+            <div class="contact-info float-left">
+              <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">Animalpre@example.com</a>
+              <i class="fa fa-phone"></i>08146640448
+            </div>
+            <div class="social-links float-right">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+          </div>
+        </section>
+      
+        <!--==========================
+          Header
+        ============================-->
+        <header id="header">
+          <div class="container">
+      
+            <div id="logo" class="pull-left">
+              <h1><a href="{% url 'animalpre:home' %}" class="scrollto" style="font-family: cursive">Animal<span>Pre</span></a></h1>
+              <!-- Uncomment below if you prefer to use an image logo -->
+              <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+            </div>
+      
+            <div  class="pull-right">
+              <p><a href="{% url 'animalpre:signup' %}" class="scrollto" style="font-family: cursive">Signup<span>/login</span></a></p>
+      
+          </div>
+      
+            
+          </div>
+          </header>
+<body>
+<div class="jumbotron text-center">
+        <h1 class="">You are loggedout</h1>
+      
+        <p class="lead">PLEASE <a href="{% url 'animalpre:login' %}" class=" " >LOGIN</a></p>
+        <hr>
+</div>      
+
+</body>
+<script> 
+  document.onreadystatechange = function() { 
+      if (document.readyState !== "complete") { 
+          document.querySelector( 
+            "body").style.visibility = "hidden"; 
+          document.querySelector( 
+            "#loader").style.visibility = "visible"; 
+      } else { 
+          document.querySelector( 
+            "#loader").style.display = "none"; 
+          document.querySelector( 
+            "body").style.visibility = "visible"; 
+      } 
+  }; 
+</script> 
+
+  <!-- Extended default form grid -->
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+</body>
+  {% endblock %}

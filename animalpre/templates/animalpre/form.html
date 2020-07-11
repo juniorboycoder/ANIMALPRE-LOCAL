@@ -1,0 +1,406 @@
+{% block body%}
+
+{% load static from staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AnimalPre</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'animalpre/img/favicon.png'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/img/apple-touch-icon.png'%}" rel="stylesheet">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  <link href="{% static 'animalpre/lib/animate/animate.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/owlcarousel/assets/owl.carousel.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+
+  
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+  
+
+  <style>
+      #loader { 
+        border: 12px solid #f3f3f3; 
+        border-radius: 50%; 
+        border-top: 12px solid #444444; 
+        width: 70px; 
+        height: 70px; 
+        animation: spin 1s linear infinite; 
+      } 
+  
+      @keyframes spin { 
+        100% { 
+            transform: rotate(360deg); 
+        } 
+      } 
+  
+      .center { 
+        position: absolute; 
+        top: 0; 
+        bottom: 0; 
+        left: 0; 
+        right: 0; 
+        margin: auto; 
+      } 
+        
+    </style>
+
+
+<body id="body">
+  <div id="loader" class="center"></div>
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">Animalpre@example.com</a>
+        <i class="fa fa-phone"></i>08146640448
+      </div>
+      <div class="social-links float-right">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  
+    
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{% url 'animalpre:home' %}" class="scrollto" style="font-family: cursive">Animal<span>Pre</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <div  class="pull-right">
+        <p><a href="{% url 'animalpre:signup' %}" class="scrollto" style="font-family: cursive">Signup<span>/login</span></a></p>
+
+    </div>
+
+       
+    <div  class="pull-right">
+        <p><a href="" class="scrollto " data-toggle="modal" data-target="#myModal" style="font-family: cursive; margin: 20px "></a></p>
+      </div>  
+
+
+
+     <div  class="pull-right">
+        <p><a href="{% url 'animalpre:apistuff' %}"  style="font-family: cursive">Prediction API</a></p>
+
+    </div>
+    
+
+      
+    </div>
+  </header><!-- #header -->
+    
+ 
+        
+  <!--==========================
+    Intro Section
+  ============================-->
+  {% load static %}
+  {% load crispy_forms_tags %}
+  <div class="container fluid">
+      <br>
+       <strong><p class="text-center"> Predictable animal classes:</p>  </strong>
+       <div class="row ">
+
+    
+          <p class= "col-xs-2   col-lg-2">Mammal</p>
+    
+          <p class= "col-xs-2 col-lg-2">Invetebrate</p>
+        
+          <p class= "col-xs-2 col-lg-2">Reptile</p>
+          <p class= "col-xs-2 col-lg-2">Amphibian</p>
+          <p class= "col-xs-2 col-lg-2">Fish</p>
+          <p class= "col-xs-1 col-lg-1">Bug</p>
+          <p class= "col-xs-1 col-lg-1">Bird</p>
+      
+       </div>
+     </div>
+      
+   
+     <body>  
+        
+        <div class="container text-center">
+          <div class= "col"></div>
+
+          <div class="card mb-4 shadow-sm">
+              <div class="card-body">
+                  <div` class="card-text">
+                      <div class = "col-12 my-5">
+
+                          <div class = "mt-5">
+                              <h4>
+                              {% if messages %}
+                              <ul class="messages">
+                                {% for message in messages %}
+                                <div  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> 
+                               <strong> {{ message }}</strong>
+                                <hr>
+                              
+                                <form method='post' class = "col-12 my-5" >	
+                                    {% csrf_token %}
+                                    {{form.is_prediction_correct.label}}??
+                                    {{form.is_prediction_correct}}
+                                  <hr>
+                                    <br>
+                                    <br>
+
+                                    {{form.what_animal_were_you_thinking_of.label}} ??
+                                    {{form.what_animal_were_you_thinking_of}}
+                                    
+                                    <br>
+                                    <hr>
+
+                                    <script  type="text/javascript">
+                                      $(document).ready(function(){
+                                       $("#nav-ask").remove();
+                                      })
+                                    </script>
+                                   
+                                    <button type='submit' class="btn btn-success  btn-block"  name="btnform2"><i class="fa fa-plus"></i>Add to API</button>
+                                  </form>
+                              
+                              
+                              </div>
+                                {% endfor %}
+                              </ul>
+
+                             
+                              {% endif %}
+                              </h4>
+                            </div>
+                      <div class="card-columns">
+                      
+                        
+                        <form method='post' id="nav-ask" class = "col-12 my-5">	
+                          {% csrf_token %}
+
+                          <div class="form-group ">
+
+                          
+                          {{form.does_it_have_hair.label}} ?
+                          {{form.does_it_have_hair }}
+
+                          </div>
+
+                          <hr>
+                          <br>
+
+
+                          {{form.does_it_have_feathers.label}} ?
+                          {{form.does_it_have_feathers}}
+                          <hr>
+                          <br>
+
+                          {{form.does_it_lay_eggs.label}} ?
+                          {{form.does_it_lay_eggs}}
+                          <hr>
+                          <br>
+                          
+
+                          {{form.does_it_produce_milk.label}} ?
+                          {{form.does_it_produce_milk}}
+                          <hr>
+                          <br>
+
+                          <br>
+
+                          {{form.is_it_airborne.label}} ?
+                          {{form.is_it_airborne}}
+                          <hr>
+                        
+                          <br>
+
+                          {{form.Is_it_Aquatic.label}} ?
+                          {{form.Is_it_Aquatic}}
+                          <hr>
+                          <br>
+                        
+
+                          {{form.is_it_a_predator.label}} ?
+                          {{form.is_it_a_predator}}
+                          <hr>
+                          <br>
+
+                          {{form.does_it_have_teeth.label}} ?
+                          {{form.does_it_have_teeth}}
+                          <hr>
+                          <br>
+
+                          {{form.does_it_have_backbone.label}} ?
+                          {{form.does_it_have_backbone}}
+                          <hr>
+                          <br>
+
+                          {{form.does_it_breath.label}} ?
+                          {{form.does_it_breath}}
+                          <hr>
+                          <br>
+
+                          {{form.is_it_venomous.label}} ?
+                          {{form.is_it_venomous}}
+
+                          <hr>
+                          <br>
+
+                          {{form.does_it_have_fins.label}} ?
+                          {{form.does_it_have_fins}}
+
+                          <hr>
+                          <br>
+
+                          {{form.how_many_legs.label}} ?
+                          {{form.how_many_legs}}
+
+                          <hr>
+                          <br>
+
+                          {{form.how_many_tails.label}} ?
+                          {{form.how_many_tails}}
+                          <hr>
+                          <br>
+
+                          {{form.is_it_domestic.label}} ?
+                          {{form.is_it_domestic}}
+                          <hr>
+
+                          
+                       
+
+
+                          <br>
+                          <button type='submit' class="btn btn-success  btn-block " id="nav-ask" name="btnform1">Submit</button>
+                        
+                        </form>
+                      </div>
+                    </div>
+              </div>
+          
+            <br>
+          </div>
+          <div class="col-lg-12">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>  
+
+  <script> 
+      document.onreadystatechange = function() { 
+          if (document.readyState !== "complete") { 
+              document.querySelector( 
+                "body").style.visibility = "hidden"; 
+              document.querySelector( 
+                "#loader").style.visibility = "visible"; 
+          } else { 
+              document.querySelector( 
+                "#loader").style.display = "none"; 
+              document.querySelector( 
+                "body").style.visibility = "visible"; 
+          } 
+      }; 
+  </script> 
+
+  <!-- JavaScript Libraries -->
+
+  <script src="{% static 'animalpre/lib/jquery/jquery.min.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/jquery/jquery-migrate.min.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/bootstrap/js/bootstrap.bundle.min.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/easing/easing.min.js'%}" rel="stylesheet"></script>
+
+
+  <script src="{% static 'animalpre/lib/superfish/hoverIntent.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/wow/wow.min.js'%}" rel="stylesheet"></script>
+
+  <script scr="{% static 'animalpre/lib/owlcarousel/owl.carousel.min.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/magnific-popup/magnific-popup.min.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/lib/sticky/sticky.js'%}" rel="stylesheet"></script>
+
+
+  <script src="{% static 'animalpre/contactform/contactform.js'%}" rel="stylesheet"></script>
+
+  <script src="{% static 'animalpre/js/main.js'%}" rel="stylesheet"></script>
+
+
+
+
+
+           
+  <!-- Extended default form grid -->
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+</body>
+  {% endblock %}

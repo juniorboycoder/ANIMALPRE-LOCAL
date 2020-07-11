@@ -1,0 +1,663 @@
+{% block body%}
+
+{% load static from staticfiles %}
+
+{% load socialaccount %}
+
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Animal Pre</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  {% load staticfiles %}
+  
+  <!-- Favicons -->
+
+  <link href="{% static 'animalpre/img/favicon.png'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/img/apple-touch-icon.png'%}" rel="stylesheet">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+ 
+
+
+  <link rel="stylesheet" href="/static/animalpre/lib/owlcarousel/assets/owl.carousel.min.css" type="text/css">
+
+  <link rel="stylesheet" href="/static/animalpre/css/style.css" type="text/css">
+
+  <link rel="stylesheet" href="/static/animalpre/lib/bootstrap/css/bootstrap.min.css" type="text/css">
+
+  <link rel="stylesheet" href="/static/animalpre/lib/animate/animate.min.css" type="text/css">
+
+  <link rel="stylesheet" href="/static/animalpre/lib/ionicons/css/ionicons.min.css" type="text/css">
+
+  <link rel="stylesheet" href="/static/animalpre/ lib/magnific-popup/magnific-popup.css" type="text/css">
+
+  
+  <link rel="stylesheet" href="/static/animalpre/ lib/magnific-popup/magnific-popup.css" type="text/css">
+  
+  <link rel="stylesheet" href="/static/animalpre/img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="/static/animalpre/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+ 
+
+
+
+  
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  
+
+  
+
+  <!-- Main Stylesheet File -->
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  
+  <style>
+    #loader { 
+      border: 12px solid #f3f3f3; 
+      border-radius: 50%; 
+      border-top: 12px solid #444444; 
+      width: 70px; 
+      height: 70px; 
+      animation: spin 1s linear infinite; 
+    } 
+
+    @keyframes spin { 
+      100% { 
+          transform: rotate(360deg); 
+      } 
+    } 
+
+    .center { 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      left: 0; 
+      right: 0; 
+      margin: auto; 
+    } 
+      
+  </style>
+  
+
+  <!-- =======================================================
+    Theme Name: Reveal
+    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+
+  <div class="container">
+   
+    <!-- Button to Open the Modal -->
+   
+     
+  
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+            
+              
+         
+          
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                  <div class="col-sm-9 col-md-7 col-lg-12 mx-auto">
+
+                      <h1 class="scrollto" style="font-family: cursive; color: darkblue">Animal<span style="color: lightgreen">pre</span></h1>
+
+                      <div class="card card-signin my-5 ">
+                          
+                          <div class="card-body">
+                          
+                             
+                                  <strong><p style="font-family: courier; color: darkblue">Signup or login to access the animal news app thats let you search for your favorite animals and read animal news. Also continue adding to Animal api</p></strong>
+
+                                  <a href="{% url 'animalpre:signup' %}"><hr class="my-4"> <button class=" btn  btn-primary btn-block text-uppercase" type="submit"> Signup</button> </a>
+                                  <br>                 
+                              <p class="text-center">OR</p>
+                             
+                                <a href="{% url 'animalpre:login' %}"> <hr class="my-4"> <button class=" btn-google  btn-success btn-block text-uppercase" type="submit"><i class=""></i> Login</button></a> 
+                                  
+                                  
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          
+          <!-- Modal footer -->
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  </body>
+  </html>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+  <body id="body">
+    <div id="loader" class="center"></div>
+
+
+    <!--==========================
+      Top Bar
+    ============================-->
+    <section id="topbar" class="d-none d-lg-block">
+      <div class="container clearfix">
+        <div class="contact-info float-left">
+          <i class="fa fa-envelope-o" ></i> <a href="mailto:contact@example.com">Animalpre@gmsil.com</a>
+          <i class="fa fa-phone"></i>08146640448
+        </div>
+        <div class="social-links float-right">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        </div>
+     
+      </section>
+     
+
+    <!--==========================
+      Header
+    ============================-->
+
+    <header id="header"   >
+      <div class="container">
+      
+          <div id="logo" class="pull-left " >
+            <h1><a href="{% url 'animalpre:home' %}" class="scrollto" style="font-family: cursive">Animal<span>Pre</span></a></h1>
+
+            
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+          </div>
+          
+          
+        <div  class="pull-right">
+          <p><a href="" class="scrollto " data-toggle="modal" data-target="#myModal" style="font-family: cursive; margin: 20px ">Signup<span>/login</span></a></p>
+
+        </div>
+
+
+       
+        
+       
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu ">
+            <li class="menu-active"><a href="#body">Home</a></li>
+            <li><a href="#about">About App</a></li>
+            <li><a href="#services">How to use</a></li>
+            
+            <li><a href="#contact">Contact</a></li>
+
+           
+          </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header><!-- #header -->
+
+
+
+
+    <!--==========================
+      Intro Section
+    ============================-->
+    <section id="intro">
+
+      <div class="intro-content">
+        <h2>Predicting<span> an animal</span></h2>
+        <div>
+          <a href="#about" class="btn-get-started scrollto">About App</a>
+          <a href="#portfolio" class="btn-projects scrollto">About Author</a>
+          <a href="{% url 'animalpre:form' %}" class="btn-get-started scrollto">Launch app</a>
+          <a href="#services" class="btn-projects scrollto">How to use app</a>
+        </div>
+      </div>
+
+      <div id="intro-carousel" class="owl-carousel" >
+        
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/1.jpg');"></div>
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/2.jpg');"></div>
+
+         
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/3.jpg');"></div>
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/4.jpg');"></div>
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/5.jpg');"></div>
+
+          <div class="item" style="background-image: url('/static/animalpre/img/intro-carousel/6.jpg');"></div>
+      </div>
+
+    
+      
+        
+  
+    </section><!-- #intro -->
+
+    <main id="main" class="loader">
+
+      <!--==========================
+        About Section
+      ============================-->
+      <section id="about" class="wow fadeInUp">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 about-img">
+                
+                
+              <img src="{% static 'animalpre/img/about-img.jpg'%}" alt="">
+            </div>
+
+            <div class="col-lg-6 content">
+              <h2>Welcome to the animal prediction application</h2>
+              <h3>This animal app that predicts an animals class based on the information you give</h3>
+
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i>It was built using a machine learning model</li>
+                <li><i class="ion-android-checkmark-circle"></i>It classifies prediction into seven classes:</li>
+                <li><i class="ion-android-checkmark-circle"></i>Mammal,Bird,Reptile,Fish, Amphibian,Bug, Invetebrate</li>
+                <li><i class="ion-android-checkmark-circle"></i>It was trained on the Zoo Classification Dataset on Kaggle</li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </section><!-- #about -->
+
+      <!--==========================
+        Services Section
+      ============================-->
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <h2>How to use</h2>
+            <p>Follow the following steps to get started</p>
+          </div>
+
+          <div class="row">
+
+              <div class="col-lg-6">
+                  <div class="box wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fa fa-thumbs-o-up"></i></div>
+                    <br>
+                    <h4 class="title"><a href="">Launch app</a></h4>
+                    <p class="description">Click on launch app to get started</p>
+                  </div>
+                </div>
+      
+
+            <div class="col-lg-6">
+              <div class="box wow fadeInLeft">
+                <div class="icon"><i class="	fa fa-smile-o"></i></div>
+                <br>
+                <h4 class="title"><a href="">Picture an animal in your mind</a></h4>
+                <p class="description">Think of a beautiful animal</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="box wow fadeInRight">
+                <div class="icon"><i class="fa fa-picture-o"></i></div>
+                <br>
+                <h4 class="title"><a href="">Fill in the form</a></h4>
+                <p class="description">Flll in a form containing some random questions about animals generally</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="icon"><i class="fa fa-star"></i></div>
+                <br>
+                <h4 class="title"><a href="">Get a predicted result</a></h4>
+                <p class="description">The ML model predicts the class of the animal you have thought about, using the infomation submitted in the form.</p>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="icon"><i class="fa fa-commenting-o"></i></div>
+                  <br>
+                  <h4 class="title"><a href="">Fill in a feedback form after prediction</a></h4>
+                  <p class="description">Selet if it correctly predicted the animal class of the animal you were thinking. Also fill in the name of the specific animal you were thinking of.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                  <div class="icon"><i class="fa fa-plus"></i></div>
+                  <br>
+                  <h4 class="title"><a href="">Click on Add to API buttton</a></h4>
+                  <p class="description"> Add your animal feedback and ML prediction to an API to improve the animal datasets worldwide</p>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                  <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="icon"><i class="fa fa-vcard-o"></i></div>
+                    <br>
+                    <h4 class="title"><a href="">View Api page</a></h4>
+                    <p class="description"> You now see your animal info added to the list of apis predicted by the animalpre app, you can also see other animals predicted in the api</p>
+                  </div>
+                </div>
+
+              
+                <div class="col-lg-6">
+                    <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                      <div class="icon"><i class="fa fa-sign-in"></i></div>
+                      <br>
+                      <h4 class="title"><a href="">Signup or Login</a></h4>
+                      <p class="description">Register or login to access the animalpre news app that let you search for your favorite animals and read animal news.Also continue adding to Animal api </p>
+                    </div>
+                  </div>
+  
+  
+            
+
+          </div>
+
+        </div>
+      </section><!-- #services -->
+
+      <!--==========================
+        Clients Section
+      ============================-->
+    
+      <!--==========================
+        Our Portfolio Section
+      ============================-->
+      <section id="portfolio" class="wow fadeInUp">
+        <div class="container ">
+          <div class="section-header">
+            <h2>About Author</h2>
+            <p>Oluyede Segun (jnr)</p>
+          </div>
+        </div>
+
+        <div class="container-fluid container">
+          <div class="row no-gutters">
+
+            <div class="col-lg-3 col-md-4">
+              <div class="portfolio-item wow fadeInUp ">
+                
+                  
+                <a href="{% static 'animalpre/img/portfolio/1.jpg'%}" class="portfolio-popup">
+                  <img src="{% static 'animalpre/img/portfolio/1.jpg'%}" alt="">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-info"><h2 class="wow fadeInUp">Author</h2></div>
+                  </div>
+
+                  
+                </a>
+              </div>
+            
+            </div>
+
+            <div class="col-lg-8">
+              <ul>
+                <li><i class=""></i>Final year Computer Scientst in Futa</li>
+                <li><i class=""></i>Proficient in AI, Python language, web development</li>
+                <li><i class=""></i>Developed this app to demonstrate the power of ML models</li>
+                <li><i class=""></i>A certified artificial intelligence practitioner</li>
+                
+              </ul>
+            </div>
+
+            
+
+          </div>
+
+        </div>
+      </section><!-- #portfolio -->
+
+      <!--==========================
+        Testimonials Section
+      ============================-->
+      
+      <!--==========================
+        Call To Action Section
+      ============================-->
+      
+      <!--==========================
+        Our Team Section
+      ============================-->
+      
+    <!-- #team -->
+
+      <!--==========================
+        Contact Section
+      ============================-->
+      <section id="contact" class="wow fadeInUp">
+        <div class="container">
+          <div class="section-header">
+            <h2>Contact</h2>
+           
+          </div>
+
+          <div class="row contact-info">
+
+            <div class="col-md-4 col-sm-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Address</h3>
+                <address>Oda road,Akure,Ondo State</address>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Phone Number</h3>
+                <p><a href="tel:+2348146640448">+2348146640448</a></p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:info@animalpre.com">animalpre@gmail.com</a></p>
+              </div>
+            </div>
+
+
+            <div class="social-links  text-center">
+                <a href="#" class="twitter" style="padding: 30px"><i class="fa fa-twitter  "></i></a>
+
+               
+                <a href="#" class="facebook"><i class="fa fa-facebook " style="padding: 30px"></i></a>
+                <a href="#" class="instagram"><i class="fa fa-instagram " style="padding: 30px"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google-plus " style="padding: 30px"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin" style="padding: 30px"></i></a>
+          </div>
+
+          </div>
+        </div>
+    
+    </section>
+    <section id="contact" class="wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+            <h2>Feedback</h2>
+            
+        </div>
+        <div class="container">
+
+        
+            <form id="" class=" form-control"  method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              
+              {{form.message}}
+
+              <br>
+              
+              <button type='submit' class="btn btn-success  btn-block"  name="btnform2"><i class="fa fa-commenting-o""></i>Send Message</button>
+
+              {% if messages %}
+              <ul class="messages">
+  
+              {% for message in messages %}
+  
+              <div  {% if message.tags %} class=" {{ message.tags }} " {% endif %}> 
+                  <strong class ="text-center"> {{ message }}<i class="	fa fa-smile-o"></i></strong>
+                   <hr>
+  
+                 </div>
+              {% endfor %}
+                </ul>
+  
+                
+            {% endif %}
+            </form>
+          </div>
+           </div>
+          </div>
+        </div>
+      </section><!-- #contact -->
+
+    </main>
+
+    <!--==========================
+      Footer
+    ============================-->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer id="footer" class="loader">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>Animalpre</strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!--
+            All the links in the footer should remain intact.
+            You can delete the links only if you purchased the pro version.
+            Licensing information: https://bootstrapmade.com/license/
+            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
+          -->
+        
+        </div>
+      </div>
+    </footer><!-- #footer -->
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  
+  </body>
+</html>
+</div>
+
+
+
+
+
+
+
+  <script> 
+      document.onreadystatechange = function() { 
+          if (document.readyState !== "complete") { 
+              document.querySelector( 
+                "body").style.visibility = "hidden"; 
+              document.querySelector( 
+                "#loader").style.visibility = "visible"; 
+          } else { 
+              document.querySelector( 
+                "#loader").style.display = "none"; 
+              document.querySelector( 
+                "body").style.visibility = "visible"; 
+          } 
+      }; 
+  </script> 
+
+
+
+
+
+  <!-- JavaScript Libraries -->
+
+  <script type="text/javascript" src="/static/animalpre/lib/jquery/jquery.min.js"></script>
+
+  <script type="text/javascript" src="/static/animalpre/lib/jquery/jquery-migrate.min.js"></script>
+
+  <script type="text/javascript" src="/static/animalpre/lib/owlcarousel/owl.carousel.min.js"></script>
+
+  <script type="text/javascript" src="/static/animalpre/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script type="text/javascript" src="/static/animalpre/lib/easing/easing.min.js"></script>
+  
+  <script type="text/javascript" src="/static/animalpre/lib/superfish/hoverIntent.js"></script>
+  
+  <script type="text/javascript" src="/static/animalpre/lib/wow/wow.min.js"></script>
+
+  
+  <script type="text/javascript" src="/static/animalpre/lib/magnific-popup/magnific-popup.min.js"></script>
+  
+  <script type="text/javascript" src="/static/animalpre/lib/sticky/sticky.js"></script>
+  
+  <script type="text/javascript" src="/static/animalpre/contactform/contactform.js"></script>
+  
+  <script type="text/javascript" src="/static/animalpre/js/main.js"></script>
+  
+
+
+  
+</body>
+</html>
+
+{% endblock %}

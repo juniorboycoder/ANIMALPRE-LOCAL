@@ -1,0 +1,289 @@
+{% block body%}
+{% load static from staticfiles %}
+
+{% load socialaccount %}
+
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Animal Pre</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  {% load staticfiles %}
+  
+  <!-- Favicons -->
+
+  <link href="{% static 'animalpre/img/favicon.png'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/img/apple-touch-icon.png'%}" rel="stylesheet">
+
+  
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  <link href="{% static 'animalpre/lib/animate/animate.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+  
+  <link href="{% static 'animalpre/lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+
+  
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'animalpre/lib/bootstrap/css/bootstrap.css'%}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'animalpre/lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+  <link href="{% static 'animalpre/lib/animate/animate.min.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+  
+  <link href="{% static 'animalpre/lib/magnific-popup/magnific-popup.css'%}" rel="stylesheet">
+
+  <link href="{% static 'animalpre/lib/ionicons/css/ionicons.min.css'%}" rel="stylesheet">
+
+
+  
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+  <link href="{% static 'animalpre/css/style.css'%}" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <style>
+    #loader { 
+      border: 12px solid #f3f3f3; 
+      border-radius: 50%; 
+      border-top: 12px solid #444444; 
+      width: 70px; 
+      height: 70px; 
+      animation: spin 1s linear infinite; 
+    } 
+
+    @keyframes spin { 
+      100% { 
+          transform: rotate(360deg); 
+      } 
+    } 
+
+    .center { 
+      position: absolute; 
+      top: 0; 
+      bottom: 0; 
+      left: 0; 
+      right: 0; 
+      margin: auto; 
+    } 
+      
+  </style>
+  
+
+
+  <style>
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+      }
+      
+      .title {
+        color: grey;
+        font-size: 18px;
+      }
+      
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+      
+      button:hover, a:hover {
+        opacity: 0.7;
+      }
+      </style>
+
+
+
+
+<body id="body">
+  <div id="loader" class="center"></div>
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <section id="topbar" class="d-none d-lg-block">
+    <div class="container clearfix">
+      <div class="contact-info float-left">
+        <i class="fa fa-envelope-o"></i> <a href="mailto:contact@example.com">Animalpre@example.com</a>
+        <i class="fa fa-phone"></i>08146640448
+      </div>
+      <div class="social-links float-right">
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="{% url 'animalpre:newsfeed' %}" class="scrollto" style="font-family: cursive">Animal<span>Pre</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+     
+      <div  class="pull-right">
+          <p ><a href="{% url 'animalpre:logout_user' %}" ><i class="fa fa-sign-out  "  data-toggle="tooltip" title="Logout!"aria-hidden="true"></i> </a></p>
+      </div>
+      
+      
+    <div  class="pull-right">
+      <p><a href="" class="scrollto " data-toggle="modal" data-target="#myModal" style="font-family: cursive; margin: 20px "></a></p>
+    </div>  
+
+    
+    
+
+    <div  class="pull-right">
+      <p><a href="{% url 'animalpre:profile' pk=user.pk %}"><i class="fa fa-fw fa-user "  data-toggle="tooltip" title="{{user}}"></i></a></p>
+    </div>
+
+    
+
+    <div  class="pull-right">
+        <p><a href="" class="scrollto " data-toggle="modal" data-target="#myModal" style="font-family: cursive; margin: 20px "></a></p>
+      </div>  
+
+
+    
+
+    
+
+
+    <div  class="pull-right">
+        <p ><a href="{% url 'animalpre:predictform' %}" ><i class="fa fa-plus "  data-toggle="tooltip" title="Prediction app"aria-hidden="true"></i> </a></p>
+    </div>
+
+    <div  class="pull-right">
+        <p><a href="" class="scrollto " data-toggle="modal" data-target="#myModal" style="font-family: cursive; margin: 20px "></a></p>
+    </div>  
+
+  </div>
+  
+  
+</div>
+  </header><!-- #header -->
+
+
+  
+ 
+  <div class="card">
+      <img src="{% static 'animalpre/img/guest-user.jpg'%}" alt="John" style="width:100%">
+      <h1>{{user}}</h1>
+      <p class="title">Animalpre</p>
+      
+      <div style="margin: 24px 0;">
+        
+        <a href="#"><i class="fa fa-envelope-o">{{user.email}}</i></a> 
+      </div>
+      
+    </div>
+    
+
+  <script> 
+    document.onreadystatechange = function() { 
+        if (document.readyState !== "complete") { 
+            document.querySelector( 
+              "body").style.visibility = "hidden"; 
+            document.querySelector( 
+              "#loader").style.visibility = "visible"; 
+        } else { 
+            document.querySelector( 
+              "#loader").style.display = "none"; 
+            document.querySelector( 
+              "body").style.visibility = "visible"; 
+        } 
+    }; 
+</script> 
+
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+
+
+
+         
+<!-- Extended default form grid -->
+<!-- JavaScript Libraries -->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/jquery/jquery-migrate.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="lib/sticky/sticky.js"></script>
+
+</body>
+
+
+{% endblock %}
