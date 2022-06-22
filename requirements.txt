@@ -18,7 +18,7 @@ jmespath==0.10.0
 joblib==0.15.1
 news-api==1.1.0
 newsapi-python==0.2.6
-numpy==1.18.4
+numpy==1.22.0
 oauthlib==3.1.0
 pandas==0.25.0
 psycopg2==2.8.5
