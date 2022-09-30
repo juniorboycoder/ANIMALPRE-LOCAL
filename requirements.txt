@@ -15,7 +15,7 @@ heroku==0.1.4
 idna==2.8
 jieba==0.42.1
 jmespath==0.10.0
-joblib==0.15.1
+joblib==1.2.0
 news-api==1.1.0
 newsapi-python==0.2.6
 numpy==1.18.4
